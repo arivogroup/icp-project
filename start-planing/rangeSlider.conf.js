@@ -1,6 +1,4 @@
-/********** jsDelivr CDN Web Address
- * https://cdn.jsdelivr.net/gh/arivogroup/icp-project@main/start-planing/rangeSlider.conf.js
- ***********************************/
+// CDN Web Addres: https://cdn.jsdelivr.net/gh/arivogroup/icp-project@main/start-planing/rangeSlider.conf.js
 
 var company_size_min = 5000;
 var company_size_max = 8000;
