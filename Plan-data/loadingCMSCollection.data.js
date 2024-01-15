@@ -1,5 +1,3 @@
-// CDN Web Addres: https://cdn.jsdelivr.net/gh/arivogroup/icp-project@main/Plan-data/loadingCMSCollection.data.js
-
 //----- LOADING PAGE ----
 //----- COMPANY SIZE -----
 var company_size;
