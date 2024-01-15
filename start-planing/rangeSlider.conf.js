@@ -13,7 +13,7 @@ var socio_economic_max = 3;
 var education_level_min = 3;
 var education_level_max = 4;
 
-/******** COMPANY SIZE ********/
+//----- COMPANY SIZE -----
 var $cs = $("#company-size");
 $cs.ionRangeSlider({
   type: "double",
@@ -33,7 +33,7 @@ $cs.on("change", function () {
   company_size_max = $cs_inp.data("to"); // input data-to attribute
 });
 
-/******** NUMBER OF EMPLOYEES ********/
+//----- NUMBER OF EMPLOYEES -----
 var $ne = $("#number-employee");
 $ne.ionRangeSlider({
   type: "double",
@@ -55,7 +55,7 @@ $ne.on("change", function () {
   number_employees_max = $ne_inp.data("to"); // input data-to attribute
 });
 
-/******** REVENUE LEVEL ********/
+//----- REVENUE LEVEL -----
 var $rl = $("#revenue-level");
 $rl.ionRangeSlider({
   type: "double",
@@ -77,7 +77,7 @@ $rl.on("change", function () {
   revenue_level_max = $rl_inp.data("to"); // input data-to attribute
 });
 
-/******** Age of Customer ********/
+//----- Age of Customer -----
 var $ac = $("#approximate-age");
 $ac.ionRangeSlider({
   type: "double",
@@ -100,7 +100,7 @@ $ac.on("change", function () {
   age_customer_max = $ac_inp.data("to"); // input data-to attribute
 });
 
-/******** Socio Economic Level ********/
+// Socio Economic Level -----
 var $se = $("#socio-economic-level");
 $se.ionRangeSlider({
   type: "double",
@@ -117,7 +117,7 @@ $se.on("change", function () {
   socio_economic_max = $se_inp.data("to"); // input data-to attribute
 });
 
-/******** Educational Level ********/
+//----- Educational Level -----
 var $el = $("#educational-level");
 $el.ionRangeSlider({
   type: "double",
@@ -141,9 +141,9 @@ $el.on("change", function () {
   education_level_max = $el_inp.data("to"); // input data-to attribute
 });
 
-/***** NEXT STEPS *****/
+//----- NEXT STEPS -----
 $(document).ready(function () {
-  /*** INIT ***/
+  //----- INIT -----
   $("#button-step-0").on("click", function () {
     const id_user = localStorage.getItem("UserId");
     const item_id = localStorage.getItem("itemId");
@@ -153,7 +153,7 @@ $(document).ready(function () {
     $("#fs-item-id").val(item_id);
   });
 
-  /*** STEP 2 ***/
+  //----- STEP 2 -----
   $("#button-step-2").on("click", function () {
     $("#fs-company-size-min").val(company_size_min);
     $("#fs-company-size-max").val(company_size_max);
@@ -163,7 +163,7 @@ $(document).ready(function () {
     $("#fs-revenue-level-max").val(revenue_level_max);
   });
 
-  /*** STEP 3 ***/
+  //----- STEP 3 -----
   $("#button-step-3").on("click", function () {
     $("#fs-approximate-age-min").val(age_customer_min);
     $("#fs-approximate-age-max").val(age_customer_max);
