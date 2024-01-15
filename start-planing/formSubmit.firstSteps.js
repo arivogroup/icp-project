@@ -1,4 +1,4 @@
-// CDN Web Addres: https://cdn.jsdelivr.net/gh/arivogroup/icp-project/start-planing/formSubmit.firstSteps.js
+// CDN Web Addres: https://cdn.jsdelivr.net/gh/arivogroup/icp-project@main/start-planing/formSubmit.firstSteps.js
 
 var Webflow = Webflow || [];
 Webflow.push(function () {
