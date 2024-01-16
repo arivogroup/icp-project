@@ -56,7 +56,7 @@ Webflow.push(function () {
 
     // fill-in user data and update Content
     document.getElementById("id-user-1").value = userId;
-    document.getElementById("UserId-1").value = itemId;
+    document.getElementById("id-item-1").value = itemId;
     document.getElementById("content-draft-initial-icp").textContent =
       document.getElementById("first-icp-input").value;
 
