@@ -1,56 +1,46 @@
 var Webflow = Webflow || [];
 Webflow.push(function () {
   // display error message
-  function displayError(message) {
-    hideLoading();
-    failureMessage.innerText = message;
-    failureMessage.style.display = "block";
+  function displayError_1(message) {
+    hideLoading_1();
+    failureMessage_1.innerText = message;
+    failureMessage_1.style.display = "block";
   }
 
   // hiding the loading indicator
-  function hideLoading() {
-    showForm();
-    successMessage.style.display = "none";
+  function hideLoading_1() {
+    showForm_1();
+    successMessage_1.style.display = "none";
   }
 
   // hide the form
-  function hideForm() {
-    formContent.style.display = "none";
+  function hideForm_1() {
+    formContent_1.style.display = "none";
   }
 
   // show the loading indicator
-  function showLoading() {
-    hideForm();
-    successMessage.style.display = "block";
+  function showLoading_1() {
+    hideForm_1();
+    successMessage_1.style.display = "block";
   }
 
   // show the form
-  function showForm() {
-    formContent.style.display = "block";
-  }
-
-  // after completion
-  function complete_submit() {
-    hideLoading();
-    form.style.display = "none";
-    form.style.opacity = "0";
-    document.getElementById("content-draft-initial-icp").style.display =
-      "inline-block";
-    document.getElementById("content-draft-initial-icp").style.opacity = "1";
+  function showForm_1() {
+    formContent_1.style.display = "block";
   }
 
   // listen for xhr events
-  function addListeners(xhr) {
-    xhr.addEventListener("loadstart", showLoading);
+  function addListeners_1(xhr) {
+    xhr.addEventListener("loadstart", showLoading_1);
   }
 
   // add xhr settings
-  function addSettings(xhr) {
-    xhr.timeout = requestTimeout;
+  function addSettings_1(xhr) {
+    xhr.timeout = requestTimeout_1;
   }
 
   // triggered form submit
-  function triggerSubmit(event) {
+  function triggerSubmit_1(event) {
     // prevent default behavior form submit behavior
     event.preventDefault();
 
@@ -64,54 +54,46 @@ Webflow.push(function () {
     let formData = new FormData(event.target);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", event.srcElement.action);
-    addListeners(xhr);
-    addSettings(xhr);
+    addListeners_1(xhr);
+    addSettings_1(xhr);
     xhr.send(formData);
 
     // capture xhr response
     xhr.onload = function () {
       if (xhr.status === 302) {
-        showLoading;
+        showLoading_1;
         let waitSuccessMessage = setTimeout(section_1_1_Update, 3500);
         function section_1_1_Update() {
-          hideLoading();
-          form.style.display = "none";
-          form.style.opacity = "0";
+          hideLoading_1();
+          form_1.style.display = "none";
+          form_1.style.opacity = "0";
           document.getElementById("content-draft-initial-icp").style.display =
             "inline-block";
           document.getElementById("content-draft-initial-icp").style.opacity =
             "1";
         }
       } else {
-        displayError(errorMessage);
+        displayError_1(errorMessage_1);
       }
     };
 
     // capture xhr request timeout
     xhr.ontimeout = function () {
-      displayError(errorMessageTimedOut);
+      displayError_1(errorMessageTimedOut_1);
     };
   }
 
-  // replace with your form ID
-  const form = document.getElementById("form_section_1_1");
-
-  // set the Webflow Content Div Block ID to 'Form Block'
-  let formContent = document.getElementById("wf-form-Section-1_1-Form");
-
-  // set the Webflow Error Message Div Block ID to 'error-message'
-  let failureMessage = document.getElementById("section1_1-error-message");
-
-  // set the Webflow Success Message Div Block ID to 'success-message'
-  let successMessage = document.getElementById("section1_1-success-message");
+  const form_1 = document.getElementById("form_section_1_1");
+  let formContent_1 = document.getElementById("wf-form-Section-1_1-Form");
+  let failureMessage_1 = document.getElementById("section1_1-error-message");
+  let successMessage_1 = document.getElementById("section1_1-success-message");
 
   // set request timeout in milliseconds (1000ms = 1second)
-  let requestTimeout = 5000;
-
+  let requestTimeout_1 = 5000;
   // error messages
-  let errorMessageTimedOut = "Oops! Seems this timed out. Please try again.";
-  let errorMessage = "Oops! Something went wrong. Please try again.";
+  let errorMessageTimedOut_1 = "Oops! Seems this timed out. Please try again.";
+  let errorMessage_1 = "Oops! Something went wrong. Please try again.";
 
   // capture form submit
-  form.addEventListener("submit", triggerSubmit);
+  form_1.addEventListener("submit", triggerSubmit_1);
 });
