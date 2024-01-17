@@ -55,7 +55,7 @@ Webflow.push(function () {
       socio_economic;
     el_pretty(el_min, el_max);
     document.getElementById("content-educational-level").textContent =
-      educational_level;
+      education_level;
 
     // setup + send xhr request
     let formData = new FormData(event.target);
