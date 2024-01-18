@@ -45,8 +45,8 @@ Webflow.push(function () {
     event.preventDefault();
 
     // fill-in user data and update Content
-    document.getElementById("id-user-4").value = userId;
-    document.getElementById("id-item-4").value = itemId;
+    document.getElementById("id-user-5").value = userId;
+    document.getElementById("id-item-5").value = itemId;
     document.getElementById("content-personality").textContent =
       document.getElementById("input_Personality").value;
     document.getElementById("content-lifestyle").textContent =
