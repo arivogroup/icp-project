@@ -47,12 +47,10 @@ Webflow.push(function () {
     // fill-in user data and update Content
     document.getElementById("id-user-5").value = userId;
     document.getElementById("id-item-5").value = itemId;
-    document.getElementById("content-personality").textContent =
-      document.getElementById("input_Personality").value;
-    document.getElementById("content-lifestyle").textContent =
-      document.getElementById("input_Lifestyle").value;
-    document.getElementById("content-interests").textContent =
-      document.getElementById("input_Interests").value;
+    document.getElementById("content-technologies").textContent =
+      document.getElementById("input_technologiesPresented").value;
+    document.getElementById("content-capabilities").textContent =
+      document.getElementById("input_technicalCapabilities").value;
 
     // setup + send xhr request
     let formData = new FormData(event.target);
