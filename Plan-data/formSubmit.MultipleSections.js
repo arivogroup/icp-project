@@ -26,7 +26,7 @@ Webflow.push(function () {
 
   // show the form
   function showForm() {
-    formContent.style.display = "block";
+    formContent.style.display = "flex";
   }
 
   // listen for xhr events
@@ -45,8 +45,9 @@ Webflow.push(function () {
     event.preventDefault();
 
     // fill-in user data and update Content
-    document.getElementById("section-content").textContent =
-      document.getElementById("section-content-input").value;
+    sectionContent.textContent = document.getElementById(
+      "section-content-input",
+    ).value;
 
     // setup + send xhr request
     let formData = new FormData(event.target);
@@ -65,7 +66,8 @@ Webflow.push(function () {
           hideLoading();
           form.style.display = "none";
           form.style.opacity = "0";
-          showContent();
+          sectionContent.style.display = "inline-block";
+          sectionContent.style.opacity = "1";
         }
       } else {
         displayError(errorMessage);
@@ -82,6 +84,7 @@ Webflow.push(function () {
   let formContent = document.getElementById("wf-form-Section-Content-Form");
   let failureMessage = document.getElementById("section-error-message");
   let successMessage = document.getElementById("section-success-message");
+  let sectionContent = document.getElementById("section-content");
 
   // set request timeout in milliseconds (1000ms = 1second)
   let requestTimeout = 5000;
