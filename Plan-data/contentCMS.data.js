@@ -39,6 +39,8 @@ function SectionContentFill() {
   document.getElementById("section-content-input").value = contentCMS;
   document.getElementById("section-id-user").value =
     document.getElementById("next_userid").textContent;
+  document.getElementById("section-id-item").value =
+    document.getElementById("next_itemid").textContent;
   document.getElementById("section-option-name").value = optionName;
 }
 
