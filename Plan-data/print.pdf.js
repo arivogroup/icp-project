@@ -18,12 +18,9 @@ function fillPrintContent() {
     '-technologies',
     '-capabilities'
   ];
-  for (var i == 0, i < list_sections.length, i++ ) {
+  for (let i = 0; i < list_sections.length; i++ ) {
     document.getElementById("print" + list_sections[i]).innerText = document.getElementById("content" + list_sections[i]).innerText;
   }
-  //document.getElementById("print-draft-initial-icp").innerText = document.getElementById("content-draft-initial-icp").innerText;
-  //document.getElementById("print-company-size").innerText = document.getElementById("content-company-size").innerText;
-
 };
 
 // Event DOM completly loaded
