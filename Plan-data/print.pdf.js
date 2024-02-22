@@ -2,8 +2,28 @@ const element = document.getElementById("print-section");
 const printButton = document.getElementById("print-icon");
 
 function fillPrintContent() {
-  document.getElementById("print-draft-initial-icp").textContent = document.getElementById("content-draft-initial-icp").textContent;
-  document.getElementById("print-company-size").innerText = document.getElementById("content-company-size").innerText;
+  var list_sections = [
+    '-draft-initial-icp', 
+    '-company-size', 
+    '-number-employees', 
+    '-revenue-level', 
+    '-location', 
+    '-age-customer', 
+    '-usual-gender',
+    '-socio-economic',
+    '-educational-level',
+    '-personality',
+    '-lifestyle',
+    '-interests',
+    '-technologies',
+    '-capabilities'
+  ];
+  for (var i == 0, i < list_sections.length, i++ ) {
+    document.getElementById("print" + list_sections[i]).innerText = document.getElementById("content" + list_sections[i]).innerText;
+  }
+  //document.getElementById("print-draft-initial-icp").innerText = document.getElementById("content-draft-initial-icp").innerText;
+  //document.getElementById("print-company-size").innerText = document.getElementById("content-company-size").innerText;
+
 };
 
 // Event DOM completly loaded
