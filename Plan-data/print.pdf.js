@@ -1,4 +1,4 @@
-const element document.getElementById("print-section");
+const element = document.getElementById("print-section");
 const printButton = document.getElementById("print-icon");
 
 function fillPrintContent() {
