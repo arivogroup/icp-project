@@ -14,12 +14,12 @@ $(document).ready(function () {
 
   // Function -> Hide all sections
   function hideSections() {
-    instructionSection.style.opacity = 0;
-    instructionSection.style.display = none;
-    leanCanvasSection.style.opacity = 0;
-    leanCanvasSection.style.display = none;
-    mainSection.style.opacity = 0;
-    mainSection.style.display = none;
+    instructionSection.style.opacity = "0";
+    instructionSection.style.display = "none";
+    leanCanvasSection.style.opacity = "0";
+    leanCanvasSection.style.display = "none";
+    mainSection.style.opacity = "0";
+    mainSection.style.display = "none";
   }
 
   // <---------------> Loading -> Instruction Page
@@ -30,8 +30,8 @@ $(document).ready(function () {
       {}
     );
     hideSections();
-    instructionSection.style.display = block;
-    instructionSection.style.opacity = 1;
+    instructionSection.style.display = "block";
+    instructionSection.style.opacity = "1";
   });
 
   // <---------------> Loading -> Lean Canvas Page
@@ -47,8 +47,8 @@ $(document).ready(function () {
       {}
     );
     hideSections();
-    leanCanvasSection.style.display = block;
-    leanCanvasSection.style.opacity = 1;
+    leanCanvasSection.style.display = "block";
+    leanCanvasSection.style.opacity = "1";
   }
 
   // Lean Canvas -> Navbar Plandata Menu Button
@@ -64,8 +64,8 @@ $(document).ready(function () {
   // <---------------> Loading -> Main Page
   function showMainContent() {
     hideSections();
-    mainSection.style.display = flex;
-    mainSection.style.opacity = 1;
+    mainSection.style.display = "flex";
+    mainSection.style.opacity = "1";
   }
 
   // Plan -> Navbar Plandata Menu Button
