@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //DOM elements
-  const instructionSection = document.getElementById("instruction-content");
+  const instructionSection = document.getElementById("instructions-content");
   const leanCanvasSection = document.getElementById("leancanvas-content");
   const mainSection = document.getElementById("main-content");
 
