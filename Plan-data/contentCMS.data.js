@@ -4,6 +4,11 @@ const defaultText = document.getElementById("default-text");
 var contentCMS;
 var optionName;
 
+function decodeField(target) {
+  var dText = he.decode(target);
+  return dText;
+}
+
 function Chapter_Title(num) {
   var Title;
   switch (num) {
@@ -35,8 +40,8 @@ function ContentEmpty() {
 }
 
 function SectionContentFill() {
-  document.getElementById("section-content").textContent = contentCMS;
-  document.getElementById("section-content-input").value = contentCMS;
+  document.getElementById("section-content").textContent = decodeField(contentCMS);
+  document.getElementById("section-content-input").value = decodeField(contentCMS);
   document.getElementById("section-id-user").value =
     document.getElementById("next_userid").textContent;
   document.getElementById("section-id-item").value =
@@ -72,8 +77,8 @@ function Chapter_1_1() {
   Chapter_Title(1);
   optionName = "DraftICP";
   document.getElementById("content-draft-initial-icp").textContent =
-    firstContentFill;
-  document.getElementById("first-icp-input").textContent = firstContentFill;
+    decodeField(firstContentFill);
+  document.getElementById("first-icp-input").textContent = decodeField(firstContentFill);
   $("#guidance-content").load(
     "../app-plan/appinstruction #inst-identification",
   );
@@ -125,11 +130,11 @@ document
     Chapter_Title(1);
     optionName = "Psycographics";
     document.getElementById("input_Personality").textContent =
-      contentFill_personality;
+      decodeField(contentFill_personality);
     document.getElementById("input_Lifestyle").textContent =
-      contentFill_lifestyle;
+      decodeField(contentFill_lifestyle);
     document.getElementById("input_Interests").textContent =
-      contentFill_interests;
+      decodeField(contentFill_interests);
     $("#guidance-content").load(
       "../app-plan/appinstruction #inst-identification",
     );
@@ -142,9 +147,9 @@ document
     Chapter_Title(1);
     optionName = "Technical";
     document.getElementById("input_technologiesPresented").textContent =
-      contentFill_technologies;
+      decodeField(contentFill_technologies);
     document.getElementById("input_technicalCapabilities").textContent =
-      contentFill_capabilities;
+      decodeField(contentFill_capabilities);
     $("#guidance-content").load(
       "../app-plan/appinstruction #inst-identification",
     );
