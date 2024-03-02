@@ -18,6 +18,6 @@ if (invitation == 'true' ) {
   ProjectInput.value = project_name;
   ProjectInput.readOnly  = true;
   CollaboratorText.style.display = "block";
-  ProjectIdLabel.style.display = "block";
+  ProjectIdLabel.style.display = "block"
   ProjectIdInput.style.display = "block";
 }

@@ -1,0 +1,10 @@
+gmail.com
+yahoo.com
+hotmail.com
+outlook.com
+aol.com
+icloud.com
+protonmail.com
+zoho.com
+mail.com
+gmx.com
