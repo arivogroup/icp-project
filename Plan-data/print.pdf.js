@@ -24,6 +24,32 @@ function fillPrintContent() {
   }
 }
 
+function fillPrintContentNext() {
+  var list_sectionsNext = [
+    "identification",
+    "personas",
+    "triggers",
+    "valueDrivers",
+    "steps",
+    "concerns",
+    "newICP",
+    "messageMap",
+    "heroMessage",
+    "problem",
+    "currentSolution",
+    "limitations",
+    "perfectSolution",
+    "viewoftheSolution",
+    "solutionDescription",
+    "customerValue",
+    "solutionDetails",
+    "successStories",
+  ];
+  for (let i = 0; i < list_sectionsNext.length; i++) {
+    document.getElementById('print-' + list_sectionsNext[i]).innerText = document.getElementById('next_' + list_sectionsNext[i]).innerText;
+  }
+}
+
 // Event DOM completly loaded
 document.addEventListener("DOMContentLoaded", () => {
   //Listen when Print Button is clicked
