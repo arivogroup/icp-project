@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element.style.display = "block";
     var opt = {
       margin: [1, 0.5, 1, 0.5],
-      pagebreak: { before: ".chapterdiv__print", avoid: ["p", "h3", "h4"] },
+      pagebreak: { before: ".chapterdiv__print", avoid: ["p", "h3", "h4", ".sectiondiv__print"] },
       filename: project_name + " - " + author_name + ".pdf",
       image: { type: "jpg", quality: 0.2 },
       html2canvas: { allowTaint: true, scale: 1 },
