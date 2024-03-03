@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Listen when Print Button is clicked
   printButton.addEventListener("click", () => {
     fillPrintContent();
+    fillPrintContentNext();
     element.style.display = "block";
     var opt = {
       margin: [1, 0.5, 1, 0.5],
