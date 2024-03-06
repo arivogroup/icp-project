@@ -1,6 +1,8 @@
 const sectionTitle = document.getElementById("section-title");
 const testHeading = document.getElementById("test-heading");
-const defaultText = document.getElementById("default-text");
+const contentSection1 = document.getElementById("content-draft-initial-icp");
+const inputSection1 = document.getElementById("first-icp-input");
+const emptyItem_1_1 = document.getElementById("defaul-text-FIICP");
 var contentCMS;
 var optionName;
 
@@ -31,11 +33,16 @@ function Chapter_Title(num) {
   document.getElementById("chapter-title").textContent = Title;
 }
 
-function ContentEmpty() {
+function blockEmptySection(contentCMS, newItemBanner, paragraphContainer) {
+  let filled = true;
   if (contentCMS == "") {
-    defaultText.style.display = "block";
+    newItemBanner.style.display = 'flex';
+    paragraphContainer.style.display = 'none';
+    filled = false;
   } else {
-    defaultText.style.display = "none";
+    newItemBanner.style.display = 'none';
+    paragraphContainer.style.display = 'inline-block';
+    filled = true;
   }
 }
 
@@ -76,9 +83,9 @@ async function showContent() {
 function Chapter_1_1() {
   Chapter_Title(1);
   optionName = "DraftICP";
-  document.getElementById("content-draft-initial-icp").textContent =
-    decodeField(firstContentFill);
-  document.getElementById("first-icp-input").textContent = decodeField(firstContentFill);
+  blockEmptySection(contentSection1, emptyItem_1_1, firstContentFill);
+  contentSection1.textContent = decodeField(firstContentFill);
+  inputSection1.textContent = decodeField(firstContentFill);
   $("#guidance-content").load(
     "../app-plan/appinstruction #inst-identification",
   );
