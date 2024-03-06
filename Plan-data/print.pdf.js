@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fillPrintContent();
     fillPrintContentNext();
     element.style.display = "block";
+    bodyElement.classList.add('overflow-hidden');
     var opt = {
       margin: [1, 0.5, 1, 0.5],
       pagebreak: { before: ".chapterdiv__print", avoid: ["p", "h3", "h4", ".sectiondiv__print"] },
@@ -73,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let waitTimeOutPrint = setTimeout(hidePrintSection, 2000);
     function hidePrintSection() {
       element.style.display = "none";
+      bodyElement.classList.remove('overflow-hidden');
     }
   });
 });
